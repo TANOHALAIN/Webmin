@@ -25,3 +25,9 @@ VOLUME [ "/var/run/webmin:/var/run/container-control" ]
 EXPOSE 10000
 
 ENTRYPOINT [ "bash" "/bin/sh" ]
+FROM jgrojasx/webmin
+
+EXPOSE 10000:10000
+VOLUME /var/log/apache2/:/var/log/apache2
+VOLUME /etc/apache2/:/etc/apache2
+VOLUME /var/www:/var/www
